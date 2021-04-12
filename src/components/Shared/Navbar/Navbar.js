@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const Navbar = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
@@ -10,22 +13,27 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link mr-5"  href="#">Home</a>
+                <Link className="nav-link mr-5"  to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link mr-5" href="#">About</a>
+                <Link className="nav-link mr-5" to="/">Patient</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link mr-5" href="#">Dental services</a>
+                <Link className="nav-link mr-5" to="/dashboard/appointment">Dashboard</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link mr-5 text-white" href="#">Reviews</a>
+                <Link className="nav-link mr-5 text-brand" to="/">
+              {
+                loggedInUser.email ? `${loggedInUser.name}` : 'Admin'
+              }
+
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link mr-5 text-white" href="#">Blog</a>
+                <Link className="nav-link mr-5 text-white" to="/">Blogs</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link mr-5 text-white" href="#">Contact us</a>
+                <Link className="nav-link mr-5 text-white" to="/">Contact Us</Link>
               </li>
             </ul>
           </div>
