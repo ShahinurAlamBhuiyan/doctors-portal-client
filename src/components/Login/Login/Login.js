@@ -171,7 +171,7 @@ const Login = () => {
             <p style={{ color: 'red' }}>{loggedInUser.error}</p>
             <p style={{ color: 'green' }}>{loggedInUser.success}</p>
               {
-                !newUser ? <small>Don't have an account ? <strong style={{fontSize:'1rem', cursor:'pointer'}} onClick={()=>setNewUser(!newUser)}>create an account</strong> </small> : <small>Already has an account ? <strong style={{fontSize:'1rem', cursor:'pointer'}} onClick={()=>setNewUser(!newUser)}>Login</strong> </small>
+                !newUser ? <small>Don't have an account ? <strong style={{fontSize:'1rem', cursor:'pointer'}} onClick={()=>setNewUser(!newUser)}>Create an account</strong> </small> : <small>Already has an account ? <strong style={{fontSize:'1rem', cursor:'pointer'}} onClick={()=>setNewUser(!newUser)}>Login</strong> </small>
               }
           </div>
           <div className="from-group mt-5 d-flex justify-content-between flex-wrap">
