@@ -11,7 +11,7 @@ const FeaturedServices = () => {
                     </div>
                     <div className="col-md-7 align-self-center">
                         <h1>Exceptional Dental Care, on your Term</h1>
-                        <p className="text-secondary my-5">
+                        <p className="text-secondary my-5 text-justify">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.  Tempore efacere amet aperiam non odio. Temporibus, nemo quasi quisquam ipsa distinctio saepe sed veniam incidunt, tempora mollitia, dignissimos repellendus expedita. Obcaecati minima, reiciendis optio aspernatur autem pariatur soluta illum velit, eligendi dolorem consequuntur sapiente rerum accusamus aut nulla praesentium! Neque autem animi, voluptatem magnam nesciunt officia nemo nam, delectus minima velit beatae iste praesentium ad repudiandae, similique excepturi sapiente.
                         </p>
                         <button className="btn btn-brand">Learn More</button>

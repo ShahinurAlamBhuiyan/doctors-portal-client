@@ -8,11 +8,13 @@ import Header from '../Header/Header';
 import MakeAppointment from '../MakeAppointment/MakeAppointment';
 import Services from '../Services/Services';
 import Testimonials from '../Testimonials/Testimonials';
+import BusinessInfo from '../BusinessInfo/BusinessInfo';
 
 const Home = () => {
     return (
         <div>
             <Header/>
+            <BusinessInfo />
             <Services/>
             <FeaturedServices/>
             <MakeAppointment/>

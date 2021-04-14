@@ -3,7 +3,7 @@
     position: fixed;
 }
 .sidebar li{
-    margin-bottom: 2em;
+    padding-bottom: 2em;
 }
 .sidebar li:hover span{
     display: inline-block;

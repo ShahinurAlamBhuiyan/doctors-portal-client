@@ -4,7 +4,7 @@ const firebaseConfig = {
     projectId: "fir-practice-2-56cd8",
     storageBucket: "fir-practice-2-56cd8.appspot.com",
     messagingSenderId: "257470285993",
-    appId: "1:257470285993:web:c4a023e52d7064a1bec1b8"
+    appId: "1:257470285993:web:1987bfc2b4aa64e6bec1b8"
   };
 
   export default firebaseConfig;

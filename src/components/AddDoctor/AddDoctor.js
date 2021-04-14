@@ -34,11 +34,12 @@ const AddDoctor = () => {
             })
             
     }
-    console.log(info)
     return (
-        <section className='container-fluid row'>
-            <Sidebar />
-            <div className="col-md-10 p-4 pr-5" style={{ position: 'absolute', backgroundColor: '#F4FDFB', right: 0 }}>
+        <section className='row'>
+            <div className="col-md-2">
+                <Sidebar />
+            </div>
+            <div className="p-4 col-md-10" style={{backgroundColor: '#F4FDFB',left:0}}>
                 <h5 className='text-brand'>Add a Doctor</h5>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">

@@ -1,5 +1,5 @@
 .make-appointment{
-    background-image: url(../../../images/appointmentBG.png);
+    background-image: url('../../../images/appointmentBG.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -21,4 +21,12 @@
 .make-appointment img{
     height: 550px;
     transform: translateY(-130px);
+}
+
+@media (max-width: 768px) {
+    .make-appointment img{
+        height: 550px;
+        transform: translate(-100px, -130px);
+    }
+    
 }

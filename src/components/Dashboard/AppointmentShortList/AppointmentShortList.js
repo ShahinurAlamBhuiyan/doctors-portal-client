@@ -1,28 +1,46 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
+
+const useStyles = makeStyles({
+    table: {
+        minWidth: 650,
+    },
+});
 
 const AppointmentShortList = ({appointments}) => {
+    const classes = useStyles();
     return (
-        <table className="table table-borderless">
-            <thead>
-                <tr>
-                <th className="text-secondary" scope="col">Name</th>
-                <th className="text-secondary" scope="col">Phone</th>
-                <th className="text-secondary" scope="col">Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                  appointments.map((appointment, index) => 
-                        
-                    <tr>
-                        <td>{appointment.name}</td>
-                        <td>{appointment.phone}</td>
-                        <td>{appointment.email}</td>
-                    </tr>
-                    )
-                }
-            </tbody>
-        </table>
+        <TableContainer component={Paper}>
+                <Table className={classes.table} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell style={{ fontWeight: '700' }}>Name</TableCell>
+                            <TableCell style={{ fontWeight: '700' }}>Phone</TableCell>
+                            <TableCell style={{ fontWeight: '700' }}>Email</TableCell>
+
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {
+                            appointments.map(appointment => (
+                                <TableRow>
+                                    <TableCell>{appointment.name}</TableCell>
+                                    <TableCell>{appointment.phone}</TableCell>
+                                    <TableCell>{appointment.email}</TableCell>
+
+                                </TableRow>
+                            ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
     );
 };
 

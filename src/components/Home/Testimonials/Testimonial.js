@@ -5,9 +5,9 @@ const Testimonial = (props) => {
     return (
         <div className="card shadow-sm">
             <div className="card-body">
-                <p className="card-text text-center">{quote}</p>
+                <p className="card-text text-secondary text-justify">{quote}</p>
             </div>
-            <div className="card-footer d-flex  align-items-center">
+            <div className="card-footer d-flex justify-content-center  align-items-center">
                 <img className="mx-3" src={img} alt="" width="60"/>
                 <div>
                     <h6 className="text-brand">{name}</h6>

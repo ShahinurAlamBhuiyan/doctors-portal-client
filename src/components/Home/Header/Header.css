@@ -7,12 +7,37 @@
 }
 
 .header-container::after{
-    height:700px;
+    height: 700px;
     content:' ';
     position: absolute;
     top: 0;
-    width: 28%;
+    width: 42%;
     right: 0;
     background-color: #3A4256;
     z-index: -10;
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+      color: black !important;
+    }
+    .header-container::after{
+      height: 700px;
+      content:' ';
+      position: absolute;
+      top: 0;
+      width: 0;
+      right: 0;
+      background-color: #3A4256;
+      z-index: -10;
+  }
+  .appointment-text{
+    padding: 30px;
+  }
+  .navbar-collapse{
+    background-color: #3A4256;
+  }
+  .nav-link{
+    color:white;
+  }
 }

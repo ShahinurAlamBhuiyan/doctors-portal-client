@@ -8,19 +8,14 @@ const Doctors = () => {
             .then(res => res.json())
             .then(data => setDoctors(data))
     }, [])
-
-    console.log(doctors);
-
     return (
         <section className="doctors">
-            <div className="container">
-                <h5 className="text-center  text-brand mb-5">Our Doctors</h5>
-                <div className="row">
+                <h4 className="text-center text-brand mb-3">Our Doctors</h4>
+                <div className="d-flex justify-content-center flex-wrap">
                     {
                         doctors.map(doctor => <Doctor doctor={doctor} key={doctor._id} />)
                     }
                 </div>
-            </div>
         </section>
     );
 };
