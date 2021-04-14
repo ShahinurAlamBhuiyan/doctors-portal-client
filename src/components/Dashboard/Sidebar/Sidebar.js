@@ -7,8 +7,15 @@ import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 import { UserContext } from '../../../App';
 
 const Sidebar = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [isDoctor, setIsDoctor] = useState(false)
+    const [loggedInUser, setLoggedInUser,token, setToken] = useContext(UserContext);
+    const [isDoctor, setIsDoctor] = useState(false);
+
+  const handleLogOut = () => {
+    setLoggedInUser('')
+    setToken(null)
+    sessionStorage.removeItem('token')
+    sessionStorage.removeItem('user')
+  }
 
     useEffect(() => {
         fetch('https://gentle-caverns-92118.herokuapp.com/isDoctor', {
@@ -57,7 +64,7 @@ const Sidebar = () => {
                 </li>
             </ul>
             <div>
-                <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
+                <Link onClick={handleLogOut}  to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
             </div>
         </div>
     );
